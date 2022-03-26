@@ -1,0 +1,29 @@
+
+  [
+      {
+
+        "id": 1,
+        "nombre": "Patata",
+        "precio": 1,
+        "imagen": "https://saborusa.com.pa/imagesmg/imagenes/5ff3e6a0b703f_potatoes-food-supermarket-agriculture-JG7QGNY.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Cebolla",
+        "precio": 1.2,
+        "imagen": "cebolla.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Calabacin",
+        "precio": 2.1,
+        "imagen": "calabacin.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Fresas",
+        "precio": 0.6,
+        "imagen": "fresas.jpg"
+    }
+  ]
+
