@@ -1,0 +1,210 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+  }
+  
+  h1{ font-size: 3.5em;}
+  h2{ font-size: 2.7em;}
+  h3{ font-size: 2em;}
+  p{ font-size: 1.25em;}
+  ul{ list-style: none;}
+  
+  body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+  }
+  
+  button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10 px 40px;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,0,5);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0,5);
+    color: white;
+    background-color: rgb(196, 84, 153);
+  }
+  
+  button :hover{
+    background-color: rgb(192, 181, 196);
+  }
+  .container{
+    max-width: 1400px;
+    margin: auto;
+  }
+  
+  .color-acento{color: rgb(130, 167, 192)}
+  .colorabout{color: rgb(180, 161, 98);}
+  
+  header{
+    background-color: rgb(245,245,245);
+  }
+  
+  header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+  }
+  header img{
+    margin:0;
+    display: flex;
+    justify-content:start;
+    padding: 25px 30px;
+    width: 250px;
+    font-size: 1.6em;
+  }
+
+  #hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color: rgb(8, 5, 5);
+    background-image: url("../img/depositphotos_395608384-stock-photo-abstract-wallpaper-background-grunge-gray.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  #hero h1{
+    color: rgb(84, 103, 124);
+  }
+
+
+  
+  #home{
+    text-align: center;
+    padding: 200px 12px;
+  }
+  #home.container{
+      background-image: url(./assets/the_new_raw_57204163_820110741702298_510013464611142530_n-1024x1024.jpg);
+      background-image: url(./assets/img320160919124112656.jpg);
+      background-image: url(./assets/Reborn-04.jpg)
+    }
+  #about{
+    background-image: url(./assets/plastico-circular-the-new-raw_d1d00886_1500x1000.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-weight: bold;
+    font-size: 10px;
+    
+  }
+  
+  #about.container{
+  padding: 100px 0px;
+  }
+  #about .h2{
+    margin-top: 0;
+    font-size: 3.2em;
+  }
+  
+  #about.p{
+    display: none;
+  }
+  #about .carta{
+    background-position:center center;
+    background-size: cover;
+    padding: 1px;
+    margin: 20px;
+    border-radius: 15px;
+    height: 45vh;
+    background-color: #c0c9ce;
+  }
+  /* .carta :first-child{
+    background-image:  url(../Assets/cortinas-transparentes-banner-de-futbol-copa-del-mundo.jpg.jpg)
+    
+  }
+  .carta :nth-child(2){
+    background-image: linear-gradient(0deg,rgba(0,0,0,0,5),rgba(0,0,0,0,5)) url(../Assets/fond.jpg);
+    
+  }
+  .carta :nth-child(3){
+    background-image: linear-gradient(0deg,rgba(0,0,0,0,5),rgba(0,0,0,0,5)) url(../Assets/information.jpg);
+    
+  } */
+  
+  #productos .container{
+    text-align: center;
+    /* background-image: url(./assets/bda2d27bc3c8f58c5c37d43ade6880bc.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  #gameinformation .container{
+    text-align: center;
+    background-color: bisque;
+  }
+  td:hover {background:rgb(116, 194, 133)}
+  
+  #tbody{
+    text-align: center;
+  }
+  #rules .container{
+    text-align: center;
+    font-weight: bold;
+  }
+  #contact .container{
+    text-align: center;
+  }
+  footer{
+    background-color: rgb(230,230,230);
+  }
+  footer p{
+    margin: 0;
+    color: rgb(100,100,100);
+  }
+  #footer .container{
+    height: 80px;
+    text-align: center;
+    display: flex;
+    justify-content:center ;
+    align-items: flex-end;
+  }
+  
+  #rules{
+    background: url(./assets/plastico-circular-alex-chaise-longue-alessandro-mendini-ecopixel_2f0413be_749x1000.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  #rules .p{
+    color: black black;
+  }
+  #rules .li{
+    color: black black;
+  }
+  
+  @media (min-widht:700px){
+    header .container{
+      flex-direction: row;
+    }
+    header nav{
+      flex-direction: row;
+      padding-bottom: 0;
+    }
+    .about .container {
+      background-image: url(./assets/60399.webp);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      font-weight: bold;
+      font-size: 10px;
+  }
+  }
+  
