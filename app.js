@@ -3,26 +3,10 @@
 var jsondeml
 fetch('https://api.mercadolibre.com/sites/MLA/search?seller_id=139673546').then(response => response.json())
 .then(data =>{
-jsondeml=data.results});
-
-var productos
-jsondeml.forEach(element => {
-    
-});
-document.addEventListener("DOMContentLoaded", () =>
-    fetchData())
-
-// funcion que consume la api
-const fetchData = async () => {
-    try {
-        const res = await fetch('api.json');
-        const data = await res.json();
-        pintarProductos(data)
-        detectarBotones(data)
-    } catch (error) {
-        console.log(error);
-    };
-};
+jsondeml=data.results
+pintarProductos(jsondeml)
+productosEnCarrito(jsondeml)
+detectarBotones(jsondeml)});
 
 // Variables utilizadas
 const carrito = {}
@@ -38,9 +22,9 @@ const pintarProductos = (data) => {
     const fragment = document.createDocumentFragment()
 
     data.forEach(productos => {
-        template.querySelector('img').setAttribute('src', productos.imagen)
-        template.querySelector('h5').textContent = productos.nombre
-        template.querySelector('p span').textContent = productos.precio
+        template.querySelector('img').setAttribute('src', productos.thumbnail)
+        template.querySelector('h5').textContent = productos.title
+        template.querySelector('p span').textContent = productos.price
         template.querySelector('button').dataset.id = productos.id
 
         const clon = template.cloneNode(true)
@@ -77,9 +61,9 @@ const productosEnCarrito = () => {
 
     Object.values(carrito).forEach(producto => {
         template.querySelector('th').textContent = producto.id
-        template.querySelectorAll('td')[0].textContent = producto.nombre
+        template.querySelectorAll('td')[0].textContent = producto.title
         template.querySelectorAll('td')[1].textContent = producto.cantidad
-        template.querySelector('span').textContent = producto.precio * producto.cantidad
+        template.querySelector('span').textContent = producto.price * producto.cantidad
 
         // botones de agregar o sacar
         template.querySelector('.btn-suma').dataset.id = producto.id
@@ -104,7 +88,7 @@ const footerCarrito = () => {
     const fragment = document.createDocumentFragment()
 
     const nCantidad = Object.values(carrito).reduce((ac, { cantidad }) => ac + cantidad, 0);
-    const nTotal = Object.values(carrito).reduce((ac, { cantidad, precio }) => ac + cantidad * precio, 0);
+    const nTotal = Object.values(carrito).reduce((ac, { cantidad, price }) => ac + cantidad * price, 0);
 
     template.querySelectorAll('td')[0].textContent = nCantidad
     template.querySelector('span').textContent = nTotal
