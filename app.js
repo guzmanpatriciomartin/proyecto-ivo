@@ -7,7 +7,7 @@ jsondeml=data.results
 pintarProductos(jsondeml)
 productosEnCarrito(jsondeml)
 detectarBotones(jsondeml)});
-
+fetch('/preferenciaid').then(response => {console.log(response)})
 // Variables utilizadas
 const carrito = {}
 const contProductos = document.querySelector('#contenedorProductos');

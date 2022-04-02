@@ -17,6 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
           crossorigin="anonymous"></script>
+          <script src="./index.js"></script>npm install --save mercadopago
 </head>
 <body>
     <div class="container-fluid">
@@ -126,6 +127,23 @@
                             <td>
                               <button class="btn btn-dark btn-sm" id="vaciarCarrito">Vaciar todo</button>
                             </td>
+                            <td><script>
+                              // Agrega credenciales de SDK
+                              const mp = new MercadoPago("TEST-983bf096-87bc-4d3c-b91b-c8a93c3da7eb", {
+                                locale: "es-AR",
+                              });
+                            
+                              // Inicializa el checkout
+                              mp.checkout({
+                                preference: {
+                                  id: "YOUR_PREFERENCE_ID",
+                                },
+                                render: {
+                                  container: ".cho-container", // Indica el nombre de la clase donde se mostrará el botón de pago
+                                  label: "Pagar", // Cambia el texto del botón de pago (opcional)
+                                },
+                              });
+                            </script></td>
                             <td class="font-weighy-bold">$<span>1</span></td>
                           </template>
                     
@@ -166,7 +184,7 @@
                                   <h5 class="card-title">Producto</h5>
                                   <p class="card-text">$ <span>200</span></p>
                     
-                                  <button href="#" class="btn btn-dark">Comprar</button>
+                                  <button href="#" class="btn btn-dark">Añadir al carrito</button>
                                 </div>
                               </div>
                             </div>
@@ -177,6 +195,7 @@
             </div>
         </div>
     </div>
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
     <script src="./app.js"></script>
 </body>
 </html>
