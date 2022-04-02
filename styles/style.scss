@@ -1,4 +1,5 @@
 @import 'nav';
+@import 'medianav';
 
 *{
     margin: 0%;
@@ -8,11 +9,16 @@
 }
 
 html{
-    background-color: #0f0f0f;
+    background-color: #fff;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
 body{
     min-height: 200vh;
+}
+
+ul{
+    padding: 0% !important;
+    margin: 0% !important;
 }
