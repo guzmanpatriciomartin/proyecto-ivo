@@ -16,6 +16,13 @@ let preference = {
       }
     ],
   };
+
+function objetocompra() {
+
+    let cosasDelCarro = puto
+    
+}
+
 const comprame=$.ajax('/preferenciaid',{
     type: 'POST',
     url: '/preferenciaid',
@@ -52,7 +59,7 @@ productosEnCarrito(jsondeml)
 detectarBotones(jsondeml)});
 
 // Variables utilizadas
-const carrito = {}
+let carrito = {}
 const contProductos = document.querySelector('#contenedorProductos');
 const items = document.querySelector('#items')
 const footrCarrito = document.querySelector('#footerCarrito');
@@ -103,7 +110,7 @@ const productosEnCarrito = () => {
     const fragment = document.createDocumentFragment()
 
     Object.values(carrito).forEach(producto => {
-        template.querySelector('th').textContent = producto.id
+        template.querySelector('img').setAttribute('src', producto.thumbnail)
         template.querySelectorAll('td')[0].textContent = producto.title
         template.querySelectorAll('td')[1].textContent = producto.cantidad
         template.querySelector('span').textContent = producto.price * producto.cantidad
@@ -140,12 +147,12 @@ const footerCarrito = () => {
     fragment.appendChild(clon)
     footrCarrito.appendChild(fragment)
 
-    // boton que borra elementos del carrito NO FUNCA ESTA CAGADA
-    // const boton = document.querySelector('#vaciarCarrito')
-    // boton.addEventListener('click', ()=>{
-    //      carrito = {}
-    //     productosEnCarrito()
-    // })
+    // boton que borra elementos del carrito, si funca ahora :3
+    const boton = document.querySelector('#vaciarCarrito')
+    boton.addEventListener('click', ()=>{
+         carrito = {}
+        productosEnCarrito()
+    })
 
 }
 // botones del carrito que agrega o sacar productos
