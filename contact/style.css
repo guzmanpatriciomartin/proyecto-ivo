@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+
+}
+body{
+    font-size: 1.2rem;
+    min-height: 100%;
+}
+
+.grid-container > * {
+    box-shadow: -1px 1px;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+.header {
+    grid-area: header;
+    /* background-color: rgb(204, 170, 125); */
+    background-color: rgb(215, 177, 207);
+    align-items: center;
+}
+
+
+.logo{
+    position: relative;
+    font-weight: 700;
+    color: rgb(8, 8, 8);
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+li{
+   position: relative;
+   list-style: none;
+}
+a{
+   position: relative;
+   margin: 0 15px;
+   text-decoration: none;
+   color: rgb(8, 8, 8);
+   letter-spacing: 2px;
+   font-weight: bolder;
+   transition: 0.6s;
+            
+}
+.main {
+    grid-area: main;
+    background-color: gray;
+    background-image: url(./assets/tabla-vacia-tablero-madera-delante-fondo-borroso-madera-marron-perspectiva-sobre-falta-definicion-cafeteria-puede-ser-utilizado-exhibicion-o-montaje-sus-productos-preparado-exhibicion-producto_1253-1455.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: rgb(229, 180, 222);
+}
+.aside{
+    grid-area: aside;
+    background-color: rgb(208, 185, 121);
+    background-image: url(https://www.freepik.es/foto-gratis/cerrar-mano-tomando-notas_12977098.htm#query=tomar%20nota&position=30&from_view=search);
+}
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+    "header"
+    "sidebar" 
+    "aside"
+    "main"
+}
+@media (min-width: 600px) {
+    .grid-container {
+        grid-template-columns: 200px auto;
+        grid-template-rows: 100px 50px;
+        /* grid-template-areas:
+        "header header"
+        "sidebar sidebar"
+        "aside aside"
+        "main main"; */
+    grid-template:
+    "header header" 100px
+    "sidebar aside" auto
+    "main main" auto;
+    }
+}
+
