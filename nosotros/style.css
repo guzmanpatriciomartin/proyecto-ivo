@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+
+}
+body{
+    font-size: 1.2rem;
+    min-height: 100%;
+}
+.grid-container > * {
+    box-shadow: -1px 1px;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 0.4fr 11fr 0.4fr;
+    gap: 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Header Header Header" 
+      "Main Main Main"
+      "Home Home Home"
+      "aside aside aside"
+}
+  
+.Main {
+    grid-area: Main;
+    background-color:rgb(208, 198, 198);
+    text-align: center;
+
+}
+  
+.Header { 
+    grid-area: Header;
+    background-color: rgb(215, 177, 207);
+    align-items: center;
+}
+.logo{
+    position: relative;
+    font-weight: 700;
+    color: rgb(8, 8, 8);
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+li{
+   position: relative;
+   list-style: none;
+}
+a{
+   position: relative;
+   margin: 0 15px;
+   text-decoration: none;
+   color: rgb(8, 8, 8);
+   letter-spacing: 2px;
+   font-weight: bolder;
+   transition: 0.6s;
+            
+} 
+.Home {
+    grid-area: Home;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; 
+    color: #111111;
+    background-color: #efe5db;
+    background-image: url(https://assets.leroymerlin.es/is/image/lmes/fotos-validadas-opecom-decora-primavera-verano-111.jpg?$lmesBgMobile$);   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.aside{
+    grid-area: aside;
+    color: #ffffff;
+    background-color: #333333;
+    text-align: center;
+}
+
+
+   
+ 
