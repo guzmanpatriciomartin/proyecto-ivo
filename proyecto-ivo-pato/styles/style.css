@@ -290,4 +290,72 @@ ul {
 .container {
   padding: 0% !important;
 }
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  position: relative;
+  border-radius: 56px;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  -webkit-box-shadow: 9px 9px 28px #929292, -9px -9px 28px #ffffff;
+          box-shadow: 9px 9px 28px #929292, -9px -9px 28px #ffffff;
+}
+
+.card img {
+  border-radius: 56px;
+  width: 400px;
+}
+
+.card .card-body {
+  position: absolute;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-item-align: end;
+      align-self: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #00000053;
+  border-radius: 0px 0px 56px 56px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  color: #ffffff;
+}
+
+.card .card-body .btn-dark {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+#contenedorProductos > div {
+  padding-bottom: 30px;
+}
+
+#contenedorProductos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#cardswrap {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
 /*# sourceMappingURL=style.css.map */
