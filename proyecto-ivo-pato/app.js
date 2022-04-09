@@ -17,7 +17,11 @@ let preference = {
 
 
 }
-
+// $('#contenedorProductos').masonry({
+//     // options
+//     itemSelector: '.cardswrap',
+//     columnWidth: 200
+//   });
 function comprame(){$.ajax('/preferenciaid',{
     type: 'POST',
     url: '/preferenciaid',
