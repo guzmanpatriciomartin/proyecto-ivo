@@ -1,0 +1,22 @@
+
+.col-md-12{
+    text-align: center;
+}
+.large-estancias{
+width: 100%;
+height: 100px;
+text-align: left;
+color: #333;
+display: flex;
+flex-direction: row;
+}
+.item-estancia {
+    color: black;
+}
+.row {
+    width: 100%;
+}
+.page-header{
+    background-color: rgb(201, 188, 188);
+    width: 100%;
+}
