@@ -1,88 +1,41 @@
 <template>
-  <section class="banner">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-md-12n">
-                        <br>
-                        <br>
-                        <h1>
-                            SOBRE NOSOTROS
-                        </h1>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-md-12n">
-                        <h3>
-                            Diseño exclusivo en compromiso con el medio ambiente.
-                        </h3>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col">
-                        <div class="card">
-                            <img class="card-img-top" alt="Miniatura Bootstrap primero" src="https://massnegocios.com/images/proyecto.jpg" />
-                            <br>
-                            <div class="card-block">
-                                <h3 class="card-title">
-                                    Calidad
-                                </h3>
-                                <p class="card-text">
-                                    Nuestros sentidos brindan atención al detalle, el cual creemos -seriamente- que asegura la diferencia.
-                                </p>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <img class="card-img-top" alt="Miniatura Bootstrap Tercera" src="https://castelloncreativa.com/wp-content/uploads/2020/03/escuela-online-01.svg" />
-                            <div class="card-block">
-                                <br>
-                                <h3 class="card-title">
-                                    Capacidad
-                                </h3>
-                                <p class="card-text">
-                                    Todo sueño comienza como un proyecto, una idea, una necesidad. Usted nos dice los espacios, medidas y deseos y nosotros nos adaptamos con propuestas.
-                                </p>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <img class="card-img-top" alt="Miniatura Bootstrap Segundo" src="https://elpersonalista.com/wp-content/uploads/2017/02/oficina-empresa-equipo-trabajo.jpg" />
-                            <div class="card-block">
-                                <br>
-                                <h3 class="card-title">
-                                    Calidez
-                                </h3>
-                                <p class="card-text">
-                                    Ofrecemos a los clientes un trato basado en el respeto, la confianza y la amistad. ¡Queremos conocerte!
-                                </p>
-                                <br>
-                            </div>
-                        </div>
-                    </div>   
-                </div>
-            </div>
-        </div>
+  <div id="app">
+    <TheNav/>
+    <TheSectionN/>
+    <TheCardsN/>
+    <TheSectionN2/>
+    <TheCards2/>
+    <TheSectionN3/>
+    <div id="feed">
+    <TheCardsN v-for="(item, index) in products" :key="index"
+		:image= item.thumbnail
+		:title= item.title
+    :price= item.price
+    :id= item.id />
+    <h1>Muchas gracias!!</h1>
     </div>
-  </section>
+  </div>
 </template>
-
 <script>
+  // import { mapState, mapMutations } from 'vuex'
+  import TheNav from '../components/TheNav.vue'
+  import TheSectionN from '../components/TheSectionN.vue'
+  import TheCardsN from '../components/TheCardsN.vue'
+  import TheSectionN2 from '../components/TheSectionN2.vue'
+  import TheCards2 from '../components/TheCards2.vue'
+  import TheSectionN3 from '../components/TheSectionN3.vue'
 export default {
-  name: 'TheSectionN',
-  props: {
-    msg: String
-  }
+  name: 'NosotrosView',
+  components: {
+  TheNav,
+  TheSectionN,
+  TheCardsN,
+  TheSectionN2,
+  TheCards2,
+  TheSectionN3,
+}
 }
 </script>
-
 <style scoped lang="scss">
 header {
   position: fixed;
@@ -144,7 +97,112 @@ header ul li a {
   -webkit-transition: 0.6s;
   transition: 0.6s;
 }
+// ------------------navsass-----------
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 2% 10%;
+    z-index: 100;
 
+    .logo{
+        position: relative;
+        font-weight: 700;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-size: 2em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: 0.6s;
+    }
+
+    ul{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        li{
+            position: relative;
+            list-style: none;
+
+            a{
+                position: relative;
+                margin: 0 15px;
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                letter-spacing: 2px;
+                font-weight: bolder;
+                transition: 0.6s;
+            }
+        }
+    }
+}
+
+.banner{
+       
+        width: 100%;
+        height: 100vh;
+        background-image: url(../img/depositphotos_395608384-stock-photo-abstract-wallpaper-background-grunge-gray.webp);
+        background-attachment: fixed;
+        background-repeat: no-repeat;   
+        background-size: cover;
+        // padding-top: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+}   
+
+.sticky{
+    padding: 1% 10%;
+    background: #000000;
+
+    .logo{
+        color: #ffffff;
+    }
+
+    ul li a {
+        color: #ffffff;
+    }
+    
+}
+.tienda-fixed{
+    
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 57px;
+    background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 89%, rgba(0,212,255,0) 95%);
+
+}
+
+#imgPresentacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .borderRatio{
+        background-image: url(https://d1fdloi71mui9q.cloudfront.net/D0qKJXDxTO900eYwLPJS_FV7KRjXc40VD1IxO);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        height: 500px;
+        width: 500px;
+    }
+}
+
+.col-md-4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .banner {
   width: 100%;
   height: 100vh;
@@ -174,16 +232,6 @@ header ul li a {
 
 .sticky ul li a {
   color: #ffffff;
-}
-
-.tienda-fixed {
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-  top: 57px;
-  background: white;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(89%, white), color-stop(95%, rgba(0, 212, 255, 0)));
-  background: linear-gradient(180deg, white 0%, white 89%, rgba(0, 212, 255, 0) 95%);
 }
 
 #imgPresentacion {
@@ -218,26 +266,31 @@ header ul li a {
       -ms-flex-align: center;
           align-items: center;
 }
-.col-md-12n{
-  text-align: center;
+.borderRatio{
+  border-radius: 50%;
 }
-.col{
-  text-align: center;
-}
-.h1-ru{
-  color: rgba(0, 0, 0, 0);
-}
-#imgPresentacion{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    .borderRatio{
-        height: 300px;
-        width: 300px;
-        padding-bottom: 20px;
-    }
-}
+.btn-flotante {
+  font-size: 16px; /* Cambiar el tamaño de la tipografia */
+  text-transform: uppercase; /* Texto en mayusculas */
+  font-weight: bold; /* Fuente en negrita o bold */
+  color: #ffffff; /* Color del texto */
+  border-radius: 5px; /* Borde del boton */
+  letter-spacing: 2px; /* Espacio entre letras */
+  background-color: #000000; /* Color de fondo */
+  padding: 18px 30px; /* Relleno del boton */
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  transition: all 300ms ease 0ms;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+  }
+  .btn-flotante:hover {
+  background-color: #696969; /* Color de fondo al pasar el cursor */
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-7px);
+  }
+  
 @media screen and (max-width: 767px) {
   header {
     position: fixed;
@@ -359,6 +412,15 @@ header ul li a {
     height: 325px;
     width: 325px;
   }
+  .btn-flotante {
+  font-size: 14px;
+  padding: 12px 20px;
+  bottom: 20px;
+  right: 20px;
+  }
+  }
+  .dlg3Sd{
+   background-color:  #ffffff;
 }
 
 * {
@@ -465,6 +527,24 @@ ul {
 }
 /*# sourceMappingURL=style.css.map */
 
+.banner-contact{
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://i.pinimg.com/564x/04/23/5f/04235fdd40b38f219e1e65f463a88301.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
 .col-md-12n{
   text-align: center;
 }
@@ -474,4 +554,4 @@ ul {
 .h1-ru{
   color: rgba(0, 0, 0, 0);
 }
-</style>
+</style>  

@@ -1,51 +1,53 @@
 <template>
-  <div class="TheCardsN">
-        <div class="row">
+    <div class="row">
+      <div class="TheCardsN">
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" alt="Miniatura Bootstrap primero" src="https://massnegocios.com/images/proyecto.jpg" />
+                        <br>
+                        <div class="card-block">
+                            <h3 class="card-title"> Calidad</h3>
+                            <p class="card-text">Nuestros sentidos brindan atención al detalle, el cual creemos -seriamente- que asegura la diferencia.</p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            
+
             <div class="col">
                 <div class="card">
-                    <img class="card-img-top" alt="Miniatura Bootstrap primero" src="https://massnegocios.com/images/proyecto.jpg" />
-                    <br>
+                        <img class="card-img-top" alt="Miniatura Bootstrap Tercera" src="https://castelloncreativa.com/wp-content/uploads/2020/03/escuela-online-01.svg" />
                     <div class="card-block">
-                        <h3 class="card-title"> Calidad</h3>
-                        <p class="card-text">Nuestros sentidos brindan atención al detalle, el cual creemos -seriamente- que asegura la diferencia.</p>
+                        <br>
+                        <h3 class="card-title">Capacidad</h3>
+                        <p class="card-text">Todo sueño comienza como un proyecto, una idea, una necesidad. Usted nos dice los espacios, medidas y deseos y nosotros nos adaptamos con propuestas.</p>
                         <br>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="col">
-            <div class="card">
-                    <img class="card-img-top" alt="Miniatura Bootstrap Tercera" src="https://castelloncreativa.com/wp-content/uploads/2020/03/escuela-online-01.svg" />
-                <div class="card-block">
-                    <br>
-                    <h3 class="card-title">Capacidad</h3>
-                    <p class="card-text">Todo sueño comienza como un proyecto, una idea, una necesidad. Usted nos dice los espacios, medidas y deseos y nosotros nos adaptamos con propuestas.</p>
-                    <br>
+            
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" alt="Miniatura Bootstrap Segundo" src="https://elpersonalista.com/wp-content/uploads/2017/02/oficina-empresa-equipo-trabajo.jpg" />
+                    <div class="card-block">
+                      <br>
+                      <h3 class="card-title">Calidez</h3>
+                      <p class="card-text">Ofrecemos a los clientes un trato basado en el respeto, la confianza y la amistad. ¡Queremos conocerte!</p>
+                      <br>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="col">
-            <div class="card">
-                <img class="card-img-top" alt="Miniatura Bootstrap Segundo" src="https://elpersonalista.com/wp-content/uploads/2017/02/oficina-empresa-equipo-trabajo.jpg" />
-                <div class="card-block">
-                <br>
-                <h3 class="card-title">Calidez</h3>
-                <p class="card-text">Ofrecemos a los clientes un trato basado en el respeto, la confianza y la amistad. ¡Queremos conocerte!</p>
-                <br>
-            </div>
-        </div>
-    </div>
+      </div>
+    </div>  
 </template>
 
 <script>
 export default {
-  name: 'TheCardsN',
+  name: "TheCardsN",
   props: {
-    msg: String
-  }
-}
+    msg: String,
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -59,11 +61,11 @@ header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-transition: 0.6s;
   transition: 0.6s;
   padding: 2% 10%;
@@ -88,11 +90,11 @@ header ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 header ul li {
@@ -122,11 +124,11 @@ header ul li a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .sticky {
@@ -148,8 +150,20 @@ header ul li a {
   z-index: 1;
   top: 57px;
   background: white;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(89%, white), color-stop(95%, rgba(0, 212, 255, 0)));
-  background: linear-gradient(180deg, white 0%, white 89%, rgba(0, 212, 255, 0) 95%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(white),
+    color-stop(89%, white),
+    color-stop(95%, rgba(0, 212, 255, 0))
+  );
+  background: linear-gradient(
+    180deg,
+    white 0%,
+    white 89%,
+    rgba(0, 212, 255, 0) 95%
+  );
 }
 
 #imgPresentacion {
@@ -157,11 +171,11 @@ header ul li a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 #imgPresentacion .borderRatio {
@@ -178,13 +192,23 @@ header ul li a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
-
+#imgPresentacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .borderRatio{
+        height: 300px;
+        width: 300px;
+        padding-bottom: 20px;
+    }
+}
 @media screen and (max-width: 767px) {
   header {
     position: fixed;
@@ -196,14 +220,14 @@ header ul li a {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-transition: 0.6s;
     transition: 0.6s;
     padding: 2% 3%;
@@ -226,13 +250,13 @@ header ul li a {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   header ul li {
     position: relative;
@@ -276,13 +300,13 @@ header ul li a {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .jumbotron {
     text-align: center;
@@ -293,11 +317,11 @@ header ul li a {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   #imgPresentacion .borderRatio {
     background-image: url(https://d1fdloi71mui9q.cloudfront.net/D0qKJXDxTO900eYwLPJS_FV7KRjXc40VD1IxO);
@@ -312,8 +336,9 @@ header ul li a {
   margin: 0%;
   padding: 0%;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif !important;
 }
 
 html {
@@ -349,15 +374,13 @@ ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -ms-flex-pack: end;
+  justify-content: end;
   position: relative;
   border-radius: 56px;
   background: linear-gradient(145deg, #cacaca, #f0f0f0);
-  -webkit-box-shadow: 9px 9px 28px #929292,
- -9px -9px 28px #ffffff;
-          box-shadow: 9px 9px 28px #929292,
- -9px -9px 28px #ffffff;
+  -webkit-box-shadow: 9px 9px 28px #929292, -9px -9px 28px #ffffff;
+  box-shadow: 9px 9px 28px #929292, -9px -9px 28px #ffffff;
 }
 
 .card img {
@@ -373,20 +396,20 @@ ul {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   -ms-flex-item-align: end;
-      align-self: end;
+  align-self: end;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: #00000053;
   border-radius: 0px 0px 56px 56px;
   -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   color: #ffffff;
   width: 100%;
 }
@@ -412,31 +435,31 @@ ul {
 }
 /*# sourceMappingURL=style.css.map */
 
-.banner-contact{
-    width: 100%;
-    height: 100vh;
-    background-image: url(https://i.pinimg.com/564x/04/23/5f/04235fdd40b38f219e1e65f463a88301.jpg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+.banner-contact {
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://i.pinimg.com/564x/04/23/5f/04235fdd40b38f219e1e65f463a88301.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
 
-.col-md-12n{
+.col-md-12n {
   text-align: center;
 }
-.col{
+.col {
   text-align: center;
 }
-.h1-ru{
+.h1-ru {
   color: rgba(0, 0, 0, 0);
 }
 </style>

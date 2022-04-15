@@ -1,32 +1,34 @@
 <template>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12n">
-            <h1>IvoStyle EN LO GRANDE</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12n">
+                <h1>IvoStyle EN LO GRANDE</h1>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-12n">
+                <h3>Garantizamos diseños personalizados para proyectos de cualquier dimensión</h3>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-12n">
+                <h1>PROYECTOS A MEDIDA</h1>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-12n">
+                <h3>Grandes ideas para grandes espacios</h3>
+            </div>
+            <br>
+            <br>
         </div>
     </div>
-    <br>
-    <br>
-    <div class="row">
-        <div class="col-md-12n">
-            <h3>Garantizamos diseños personalizados para proyectos de cualquier dimensión</h3>
-        </div>
-    </div>
-    <br>
-    <br>
-    <div class="row">
-        <div class="col-md-12n">
-            <h1>PROYECTOS A MEDIDA</h1>
-        </div>
-    </div>
-    <br>
-    <br>
-    <div class="row">
-        <div class="col-md-12n">
-            <h3>Grandes ideas para grandes espacios</h3>
-        </div>
-    </div>
-</div>
 </template>
 
 <script>
@@ -38,7 +40,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 header {
   position: fixed;
   top: 0;
